@@ -4,7 +4,7 @@
 // @include     http*://*/truyen/*/1/*/*/
 // @exclude     http*://*/truyen/*/1/*/0/
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      Hexros Raymond
 // @icon        https://raw.githubusercontent.com/hexros-dev/load-imgs/master/assets/icons/icon_64.png
 // @downloadURL https://raw.githubusercontent.com/hexros-dev/load-imgs/master/userscript.js
@@ -107,11 +107,6 @@
         document.body.appendChild(controlPanel);
     };
 
-    const init = async () => {
-        setupControlPanel();
-        fixContentDisplay();
-        autoReload()
-    };
     const autoReload = () => {
         const actions = [
             "addSuperName('hv','z')",
@@ -135,6 +130,13 @@
             }
         });
     };
+
+    const init = async () => {
+        setupControlPanel();
+        fixContentDisplay();
+        autoReload()
+    };
+
     setTimeout(init, 1000);
 
 })();
